@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 // import DemoVue from './Demo.vue'
-// import VuePageStack from 'vue-page-stack'
+import VuePageStack from 'vue-page-stack'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
@@ -26,6 +26,8 @@ const routes = [
 const router = new VueRouter({
   routes // (缩写) 相当于 routes: routes
 })
+
+Vue.use(VuePageStack, { router }); 
 
 // 4. 创建和挂载根实例。
 // 记得要通过 router 配置参数注入路由，
